@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="Message" extends="struts-default">
+		<action name="Login_*" class="loginAction" method="{1}">
+			<result name="go">/WEB-INF/page/go.jsp</result>
+			<result name="checkname">/WEB-INF/page/checkname.jsp</result>
+		</action>
+		<action name="Register_*" class="registerAction" method="{1}">
+			<result name="go">/WEB-INF/page/go.jsp</result>
+			<result name="checkname">/WEB-INF/page/checkname.jsp</result>
+		</action>
+		<action name="Browse_*" class="browseAction" method="{1}">
+			<result name="load">/WEB-INF/page/browse.jsp</result>
+			<result name="all">/WEB-INF/page/all.jsp</result>
+			<result name="choice">/WEB-INF/page/choice.jsp</result>
+			<result name="wish">/WEB-INF/page/wish.jsp</result>
+			<result name="love">/WEB-INF/page/love.jsp</result>
+			<result name="friend">/WEB-INF/page/friend.jsp</result>
+			<result name="funny">/WEB-INF/page/funny.jsp</result>
+			<result name="sad">/WEB-INF/page/sad.jsp</result>
+			<result name="other">/WEB-INF/page/other.jsp</result>
+			<result name="messages">/WEB-INF/page/messages.jsp</result>
+			<result name="exit">/WEB-INF/page/browse.jsp</result>
+			<result name="go">/WEB-INF/page/go.jsp</result>
+			<result name="ownmess">/WEB-INF/page/ownmess.jsp</result>
+		</action>
+		<action name="AdminLogin_*" class="adminloginAction" method="{1}">
+			<result name="go">/WEB-INF/page/go.jsp</result>
+			<result name="checkadminname">/WEB-INF/page/checkadminname.jsp</result>
+		</action>
+		<action name="AdminMessage_*" class="adminmessageAction" method="{1}">
+			<result name="exit">/WEB-INF/page/browse.jsp</result>
+			<result name="go">/WEB-INF/page/go.jsp</result>
+			<result name="manager">/WEB-INF/page/manager.jsp</result>
+		</action>
+		<action name="AdminUser_*" class="adminuserAction" method="{1}">
+			<result name="go">/WEB-INF/page/go.jsp</result>
+			<result name="manageruser">/WEB-INF/page/manageruser.jsp</result>
+		</action>
+		<action name="*">
+			<result>/WEB-INF/page/{1}.jsp</result>
+		</action>
+	</package>
+</struts>

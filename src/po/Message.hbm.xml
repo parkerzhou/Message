@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="po">
+    <class name="Message" table="mess_message">
+        <id name="mess_id">
+            <generator class="native"/>
+        </id>
+        <property name="mess_user_id"/>
+        <property name="mess_theme"/>
+        <property name="mess_content"/>
+        <property name="mess_isselected"/>
+        <property name="mess_reply_name"/>
+        <property name="mess_reply_content"/>
+        <property name="mess_time"/>
+        <property name="mess_reply_time"/>
+        <property name="mess_user_name"/>
+        <property name="mess_sort_id"/>
+    </class>
+</hibernate-mapping>
